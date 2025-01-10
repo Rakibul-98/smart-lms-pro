@@ -7,6 +7,8 @@ import About from './components/About/About.jsx'
 import Courses from './components/Courses/Courses.jsx'
 import Layout from './components/Layout/Layout.jsx'
 import CourseDetails from './components/CourseDetails/CourseDetails.jsx'
+import Quiz from './components/Quiz/Quiz.jsx'
+import Profile from './components/Profile/Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
         path: 'course/:id',
         loader: async ({params})=> await fetch(`http://localhost:5000/api/v1/courses/${params.id}`),
         element: <CourseDetails />,
+      },
+      {
+        path: 'quiz/:id',
+        loader: async ({params})=> await fetch(`http://localhost:5000/api/v1/quizes/${params.id}`),
+        element: <Quiz />,
+      },
+      {
+        path: 'profile/:id',
+        loader: async ({params})=> await fetch(`http://localhost:5000/api/v1/students/${params.id}`),
+        element: <Profile />,
       },
       {
         path: '*',

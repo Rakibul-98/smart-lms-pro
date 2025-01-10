@@ -2,17 +2,26 @@
 
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { Link } from "react-router";
+import ml from '../../assets/ml.jpeg';
+import web from '../../assets/web.jpeg';
+import programming from '../../assets/programming.png';
 
 export default function CategoryCard({ categoryData }) {
 
     const { category, courses } = categoryData;
 
+    const bannerImg = {
+        "Machine Learning": ml,
+        "Web Development": web,
+        "Programming": programming,
+    }
+
     return (
-        <div className="card bg-base-100 w-96 shadow-xl">
-            <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
+        <div className="card bg-base-100 w-[80%] sm:w-[70%] md:w-[320px] xl:w-[420px] mx-auto shadow-xl">
+            <figure className="w-full h-60 overflow-hidden">
+                <img className="rounded-t-2xl"
+                    src={bannerImg[category] || "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"}
+                    alt={category} />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">
