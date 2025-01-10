@@ -1,9 +1,15 @@
+import CTA from "./CTA/CTA";
+import Footer from "./Footer/Footer";
+import Hero from "./Hero/Hero";
+import HowItWorks from "./HowItWorks/HowItWorks";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Smart LMS Pro!</h1>
-      <p>This is the home page.</p>
+    <div className="min-h-screen flex flex-col">
+      <Hero />
+      <HowItWorks />
+      <CTA />
+      <Footer />
     </div>
   )
 }

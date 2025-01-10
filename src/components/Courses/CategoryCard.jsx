@@ -18,7 +18,7 @@ export default function CategoryCard({ categoryData }) {
 
     return (
         <div className="card bg-base-100 w-[80%] sm:w-[70%] md:w-[320px] xl:w-[420px] mx-auto shadow-xl">
-            <figure className="w-full h-60 overflow-hidden">
+            <figure className="w-full h-60">
                 <img className="rounded-t-2xl"
                     src={bannerImg[category] || "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"}
                     alt={category} />
